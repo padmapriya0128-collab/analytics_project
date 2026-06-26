@@ -77,4 +77,8 @@ def student_analyze(cgpa, skill, projects, certifications, internships):
 
 if __name__ == "__main__":
     result = student_analyze(8.5, "python", 5, 4, 2)
-    print(result)
+
+print("Score:", result["score"])
+print("Readiness:", result["readiness"])
+print("Strengths:", result["strength"])
+print("Weakness:", result["weakness"])
