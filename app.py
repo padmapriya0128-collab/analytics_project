@@ -7,8 +7,11 @@ def home():
     return render_template("index.html")
 
 def student_analyze(cgpa, skill, projects, certifications, internships):
-    # Un function-oda full code inga paste pannu
-    ...
+    score =0
+    strength=[]
+    weakness=[]
+    recommendations=[]
+    readiness=[]
     return {
         "score": score,
         "readiness": readiness,
