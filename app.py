@@ -20,9 +20,9 @@ def student_analyze(cgpa, skill, projects, certifications, internships):
         "recommendations": recommendations
     }
 
-@app.route("/")
-def home():
-    return render_template("index.html")
+@app.route("/analyze",methods=["POST"])
+def analyze():
+    data=request.get_json()
 
     result = student_analyze(
         data["cgpa"],
