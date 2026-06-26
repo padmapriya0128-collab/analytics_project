@@ -23,6 +23,8 @@ def student_analyze(cgpa, skill, projects, certifications, internships):
 @app.route("/analyze",methods=["POST"])
 def analyze():
     data=request.get_json()
+    print("Received:",data)
+    
 
     result = student_analyze(
         data["cgpa"],
@@ -31,6 +33,7 @@ def analyze():
         data["certifications"],
         data["internships"]
     )
+    print("Result:",result)
 
     return jsonify(result)
 
