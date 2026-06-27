@@ -1,4 +1,5 @@
-from flask import Flask, request, jsonify, render_template,send_file
+from flask import Flask, request, jsonify, render_template
+from visual_chart import generate_chart
 
 app = Flask(__name__)
 
