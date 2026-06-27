@@ -15,14 +15,18 @@ function analyze() {
     })
     .then(res => res.json())
     .then(data => {
-        document.getElementById("result").innerHTML =
-        `
-        <h3>Score: ${data.score}</h3>
-        <h3>Readiness: ${data.readiness}</h3>
-        <p>Strengths: ${data.strength.join(", ")}</p>
-        <p>Weakness: ${data.weakness.join(", ")}</p>
-        <p>Recommendations: ${data.recommendations.join(", ")}</p>
-        `;
-    });
+    document.getElementById("result").innerHTML =
+    `
+    <h3>Score: ${data.score}</h3>
+    <h3>Readiness: ${data.readiness}</h3>
+
+    <p>Strengths: ${data.strength.join(", ")}</p>
+    <p>Weakness: ${data.weakness.join(", ")}</p>
+    <p>Recommendations: ${data.recommendations.join(", ")}</p>
+
+    <h3>Analysis Chart</h3>
+    <img src="${data.chart}" width="400"/>
+    `;
+});
 
 }
