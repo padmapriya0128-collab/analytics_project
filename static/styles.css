@@ -1,11 +1,14 @@
 body {
-    background-color: #9dc0cd;
+    background-color: #F4F8FB;
+    color: #333333;
+    font-family: Arial, sans-serif;
+
 }
 
 h1 {
-    color: red;
+    color: #1565C0;
 }
 
 p {
-    color: blue;
+    color: #37474F;
 }
