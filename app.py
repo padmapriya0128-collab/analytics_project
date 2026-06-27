@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template,send_file
 
 app = Flask(__name__)
 
@@ -90,21 +90,28 @@ def student_analyze(cgpa,skill,projects,certifications,internships):
 
 @app.route("/analyze",methods=["POST"])
 def analyze():
-    data=request.get_json()
-    print("Received:",data)
-    
+    data = request.get_json()
 
     result = student_analyze(
-    float(data["cgpa"]),
-    data["skill"],
-    int(data["projects"]),
-    int(data["certifications"]),
-    int(data["internships"])
-)
-    
-    print("Result:",result)
+        float(data["cgpa"]),
+        data["skill"],
+        int(data["projects"]),
+        int(data["certifications"]),
+        int(data["internships"])
+    )
+
+    # convert scores for chart (simple mapping logic)
+    chart_path = generate_chart(
+        result["score"] * 0.3,   # CGPA approx
+        result["score"] * 0.3,   # skills approx
+        result["score"] * 0.2,
+        result["score"] * 0.1,
+        result["score"] * 0.1
+    )
+
+    result["chart"] = chart_path
 
     return jsonify(result)
-
+    
 if __name__ == "__main__":
     app.run(debug=True)
