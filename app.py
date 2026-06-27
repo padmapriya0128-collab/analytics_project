@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from visual_chart import generate_chart
-
+from static.visual_chart import generate_chart
 app = Flask(__name__)
 
 @app.route("/")
