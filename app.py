@@ -110,6 +110,7 @@ def analyze():
     )
 
     result["chart"] = chart_path
+    print(result)
 
     return jsonify(result)
     
