@@ -99,11 +99,11 @@ def analyze():
         int(data["certifications"]),
         int(data["internships"])
     )
+    print("Analysis Result:",result)
 
-    # convert scores for chart (simple mapping logic)
     chart_path = generate_chart(
-        result["score"] * 0.3,   # CGPA approx
-        result["score"] * 0.3,   # skills approx
+        result["score"] * 0.3,   
+        result["score"] * 0.3,   
         result["score"] * 0.2,
         result["score"] * 0.1,
         result["score"] * 0.1
