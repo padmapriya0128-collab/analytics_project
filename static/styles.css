@@ -1,5 +1,5 @@
 body {
-    background-color: #a98be9;
+    background-color: #F8FAFC;
     color: #1F2937;
     font-family: Arial, sans-serif;
 }
@@ -9,7 +9,12 @@ h1 {
     text-align: center;
 }
 
+p{
+    color: #1F2937;
+} 
+
+
 button {
-    background-color: #703583;
+    background-color: #10B981;
     color: white;
 }
