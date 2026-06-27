@@ -1,12 +1,15 @@
-p {
-    color: rgb(135, 59, 141);
-
+body {
+    background-color: #F8FAFC;
+    color: #1F2937;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
-    color: #2E7D32;
+    color: #2563EB;
+    text-align: center;
 }
 
-body {
-    background-color: #acd1e4;
+button {
+    background-color: #10B981;
+    color: white;
 }
