@@ -13,7 +13,7 @@ def student_analyze(cgpa,skill,projects,certifications,internships):
     weakness = []
     recommendations = []
 
-    # CGPA
+    
     if cgpa >= 8:
         score += 25
         strength.append("Good at Academics")
@@ -24,7 +24,7 @@ def student_analyze(cgpa,skill,projects,certifications,internships):
         weakness.append("Not Good at Academics")
         recommendations.append("Improve Academics")
 
-    # Skills
+    
     all_skills = [
         "python", "java", "c++", "html",
         "css", "javascript", "sql",
@@ -38,7 +38,7 @@ def student_analyze(cgpa,skill,projects,certifications,internships):
         weakness.append("Need to Improve Skills")
         recommendations.append("Learn New Skills")
 
-    # Projects
+    
     if projects >= 5:
         score += 20
         strength.append("Good Technical Projects")
@@ -49,7 +49,7 @@ def student_analyze(cgpa,skill,projects,certifications,internships):
         weakness.append("Not Enough Technical Projects")
         recommendations.append("Work on More Technical Projects")
 
-    # Certifications
+    
     if certifications >= 5:
         score += 10
         strength.append("Good Certifications")
@@ -60,7 +60,7 @@ def student_analyze(cgpa,skill,projects,certifications,internships):
         weakness.append("Need More Certifications")
         recommendations.append("Complete More Certifications")
 
-    # Internships
+    
     if internships >= 3:
         score += 15
         strength.append("Good Internship Experience")
@@ -71,7 +71,7 @@ def student_analyze(cgpa,skill,projects,certifications,internships):
         weakness.append("No Internship Experience")
         recommendations.append("Gain Internship Experience")
 
-    # Readiness
+    
     if score >= 80:
         readiness = "Placement Ready"
     elif score >= 60:
